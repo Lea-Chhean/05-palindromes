@@ -1,11 +1,15 @@
 #### Fonction secondaire
+"""Fonction permettant de vpirr si un mot est un palindrome"""
+import string
+from unicode import unidecode
 
 
 def ispalindrome(p):
 
-    # votre code ici
-    
-    return False
+    """Vérifie si le mot passé est un palindrome"""
+    s = unidecode(s.replace(" ","").lower())
+    s = s.translate(str.maketrans("","",string.punctuation))
+    return s== s[::-1]
 
 #### Fonction principale
 
@@ -13,7 +17,7 @@ def ispalindrome(p):
 def main():
 
     # vos appels à la fonction secondaire ici
-
+    """Voici une fonction permettant de tester la fonction ispalindrome"""
     for s in ["radar", "kayak", "level", "rotor", "civique", "deifie"]:
         print(s, ispalindrome(s))
 
